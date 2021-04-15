@@ -7,4 +7,10 @@ Please don't copy, learn to make this yourself.
 
 - pwnd by core
 */
-document.addEventListener
+DEBUG_MODE = false
+function debug(msg) {
+  if DEBUG_MODE
+function init() {
+  document.addEventListener("keydown", (e) => {
+    
+}
