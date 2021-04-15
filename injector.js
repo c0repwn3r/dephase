@@ -54,5 +54,13 @@ function init(debug=false) {
   });
 }
 function test() {
-  info("Running tests. Ignore log messages beyond this point.", "tests");
+  info("Running tests. Ignore log messages beyond this point.", "Tests");
   enableDebugMode();
+  // Logging tests
+  debug("debug_log_text", "Tests");
+  info("info_log_text", "Tests");
+  warn("warn_log_text", "Tests");
+  error("error_log_text", "Tests");
+  fatal("fatal_log_text", "Tests");
+  debug("Testing script injection");
+  
