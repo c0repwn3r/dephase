@@ -14,11 +14,11 @@ function debug(msg, thread) {
     console.log("[" + thread + "/DEBUG] " + msg);
   }
 }
-function enableDebugLogging() {
+function enableDebugMode() {
   DEBUG_MODE = true;
   debug("Enabled debug logging.", "AdvLogSrv");
 }
-function disableDebugLogging() {
+function disableDebugMode() {
   debug("Disabled debug logging.", "AdvLogSrv");
   DEBUG_MODE = false;
 }
