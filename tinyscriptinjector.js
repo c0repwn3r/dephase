@@ -1,1 +1,1 @@
-(function(d,s){script = d.createElement('script');script.type = 'text/javascript';script.async = true;script.src = s;d.getElementsByTagName('head')[0].appendChild(script);}(document));
+!function(e,t){script=e.createElement("script"),script.type="text/javascript",script.async=!0,script.src="https://cdn.jsdelivr.net/gh/c0repwn3r/dephase@master/dephase.min.js",e.getElementsByTagName("head")[0].appendChild(script)}(document);
