@@ -34,7 +34,7 @@ function error(msg, thread) {
 function fatal(msg, thread) {
   console.log("[" + thread + "/FATAL] " + msg);
 }
-function injectScriptUrl(url, id) {
+function injectScriptUrl(url) {
   debug("Injector util fun called for "+url, "c0repwn3r-injetor");
   s = d.createElement('script');
   s.type = 'text/javascript';
@@ -45,7 +45,7 @@ function injectScriptUrl(url, id) {
   s.src = url;
   d.getElementsByTagName('head')[0].appendChild(s);
 }
-function init(debug=false) {
+function dephase_init(debug=false) {
   if (debug) {enableDebugMode();} else {disableDebugMode();}
   d.addEventListener("keydown", (e) => {
     if (e.keyCode == 192) {
@@ -53,7 +53,7 @@ function init(debug=false) {
     }
   });
 }
-function test() {
+function dephase_test() {
   info("Running tests. Ignore log messages beyond this point.", "Tests");
   enableDebugMode();
   // Logging tests
@@ -62,5 +62,9 @@ function test() {
   warn("warn_log_text", "Tests");
   error("error_log_text", "Tests");
   fatal("fatal_log_text", "Tests");
-  debug("Testing script injection");
-  
+  debug("Testing script injection", "Tests");
+  injectScriptUrl("https://cdn.jsdelivr.net/gh/c0repwn3r/dephase@master/test.js");
+  debug("Alert should pop up now.", "Tests");
+  disableDebugMode();
+  info("Tests completed. Log messages are now live.", "Tests");
+}
